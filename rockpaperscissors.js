@@ -55,11 +55,26 @@ function playround (computerselection, playerselection)
         }
     }
 }
-const playerinput = "rock";//prompt("enter your choice:",'')
-const results = playround(computerchoice,playerinput);
-console.log(results);
+const playerinput = prompt("enter your choice:",'')
+playerinput.toLowerCase
+//const results = playround(computerchoice,playerinput);
+//console.log(results);
 // function returnresults(results)
 // {
 //     return results;
 // }
 // returnresults(results);
+function game()
+{
+    let index = 0;
+    for (;index <= 5; index++)
+    {
+        //allows computer to choose new values every round
+        const computerchoice = getcomputerchoice(bucketlist);
+        //pass the computer values and chosen value 
+        const results = playround(computerchoice,playerinput.toLowerCase());
+        //log the results
+        console.log(results);
+    }
+}
+game();
